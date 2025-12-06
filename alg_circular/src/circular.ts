@@ -80,11 +80,7 @@ export class Escalonador {
         continue;
       }
 
-      this._filaProntas.sort((a, b) => { 
-        if (a.ingresso === b.ingresso) {
-           return a.id - b.id; 
-        } 
-        return a.ingresso - b.ingresso; });  
+      this._filaProntas.sort((a, b) =>  a.ingresso - b.ingresso );  
 
       const tarefa = this._filaProntas.shift()!;
 
@@ -163,6 +159,7 @@ esc.adicionarTarefa([t1,t2,t3,t4]);
 
 esc.executar()
 esc.gerarResumo([t1,t2,t3,t4])
+
 
 
 
